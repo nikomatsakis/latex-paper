@@ -1,0 +1,2 @@
+build:
+    pdflatex paper.tex
