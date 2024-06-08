@@ -42,6 +42,9 @@ jobs:
             scheme-basic
             cleveref
             hyperref
+            sourceserifpro
+            sourcecodepro
+            MnSymbol
       - name: Install Just
         uses: extractions/setup-just@v2
       - name: pdflatex
