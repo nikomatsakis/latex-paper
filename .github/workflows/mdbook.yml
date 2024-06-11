@@ -40,11 +40,22 @@ jobs:
         with:
           packages: |
             scheme-basic
-            cleveref
-            hyperref
-            sourceserifpro
-            sourcecodepro
-            MnSymbol
+            graphicx
+            multirow
+            amsmath
+            amssymb
+            amsfonts
+            amsthm
+            mathrsfs
+            appendix
+            xcolor
+            textcomp
+            manyfoot
+            booktabs
+            algorithm
+            algorithmicx
+            algpseudocode
+            listings
       - name: Install Just
         uses: extractions/setup-just@v2
       - name: pdflatex
