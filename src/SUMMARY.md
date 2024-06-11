@@ -1,3 +1,3 @@
-# Rusty Logic
+# Publication
 
 - [Introduction](./introduction.md)

@@ -1,3 +1,3 @@
-# Rusty Logic
+# Publication
 
-[Read the PDF.](./paper.pdf)
+[Read the PDF.](./assets/sn-article.pdf)
