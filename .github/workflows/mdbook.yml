@@ -48,7 +48,7 @@ jobs:
       - name: Build with mdBook
         run: mdbook build
       - name: Move paper
-        run: mv sn-article.pdf ./book/assets
+        run: mkdir -p book/assets && mv sn-article.pdf ./book/assets
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
