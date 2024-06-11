@@ -35,31 +35,11 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Install TexLive
-        uses: teatimeguest/setup-texlive-action@v3
+      - name: Build
+        uses: xu-cheng/latex-action@v3
         with:
-          packages: |
-            scheme-basic
-            graphicx
-            multirow
-            amsmath
-            amssymb
-            amsfonts
-            amsthm
-            mathrsfs
-            appendix
-            xcolor
-            textcomp
-            manyfoot
-            booktabs
-            algorithm
-            algorithmicx
-            algpseudocode
-            listings
-      - name: Install Just
-        uses: extractions/setup-just@v2
-      - name: pdflatex
-        run: just build
+          root_file: |
+            sn-article.tex
       - name: Install mdBook
         run: |
           curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
@@ -68,7 +48,7 @@ jobs:
       - name: Build with mdBook
         run: mdbook build
       - name: Move paper
-        run: mv paper.pdf ./book
+        run: mv sn-article.pdf ./book/assets
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
